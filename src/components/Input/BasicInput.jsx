@@ -13,7 +13,7 @@ const InputWrapper = styled.div`
   }
 `
 
-const LabelStyle = styled.label`
+export const LabelStyle = styled.label`
   font-size: 28px;
   color: ${({ theme }) => theme.colors.primaryTextColor};
   font-weight: 900;
@@ -79,10 +79,11 @@ function BasicInput({
   onChange,
   type,
   placeholder,
-  required,
+  required = false,
+  styles={}
 }) {
   return (
-    <InputWrapper>
+    <InputWrapper style={{...styles}}>
       <LabelStyle>{label}</LabelStyle>
       <InputStyle
         name={name}
@@ -90,6 +91,7 @@ function BasicInput({
         onChange={onChange}
         type={type}
         placeholder={placeholder}
+        required={required}
       />
       <StarIcon>{required && <Star />}</StarIcon>
     </InputWrapper>

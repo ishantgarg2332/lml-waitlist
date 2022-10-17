@@ -1,12 +1,11 @@
 import { ReactComponent as Star } from 'assets/icons/star.svg'
 import Button from 'components/Basic/Button'
-import BasicInput from 'components/Input/BasicInput'
+import BasicInput, { LabelStyle } from 'components/Input/BasicInput'
 import useForm from 'hooks/useForm'
 import styled from 'styled-components'
 import { device } from 'styles/BreakPoints'
 import { Box } from 'styles/Global'
 
-const FormStyle = styled.form``
 
 const TextStyle = styled.span`
   font-size: 16px;
@@ -20,17 +19,18 @@ const TextStyle = styled.span`
 `
 
 const Form = ({ handleAddedInList }) => {
-  const { user, onChangeInput, onSubmitForm } = useForm({ name: '', email: '' })
+  const { user, onChangeInput, onSubmitForm } = useForm({ name: '', email: '', code: '' })
+
+  const { name, email, code } = user
 
   const submitForm = () => {
-    handleAddedInList()
-    onSubmitForm()
+    handleAddedInList({
+      name, email, code
+    })
   }
 
-  const { name, email } = user
-
   return (
-    <FormStyle onSubmit={submitForm}>
+    <form>
       <BasicInput
         label="Name"
         name="name"
@@ -38,6 +38,7 @@ const Form = ({ handleAddedInList }) => {
         onChange={onChangeInput}
         type="text"
         placeholder="Your Name"
+        required
       />
       <BasicInput
         label="Email"
@@ -48,6 +49,20 @@ const Form = ({ handleAddedInList }) => {
         placeholder="Your Email"
         required
       />
+      <br />
+      <br />
+      <LabelStyle style={{fontSize: '20px'}}>
+        Have a referral ?
+      </LabelStyle>
+      <BasicInput
+        styles={{marginTop: '15px'}}
+        label="Referral code"
+        name="code"
+        value={code}
+        onChange={onChangeInput}
+        type="text"
+        placeholder=""
+      />
       <Box mt={50} flxRight smNone>
         <TextStyle>
           <Star />
@@ -55,9 +70,9 @@ const Form = ({ handleAddedInList }) => {
         </TextStyle>
       </Box>
       <Box mt={40} flxRight>
-        <Button title="Join the waitlist" />
+        <Button title="Join the waitlist" type="submit" onClick={submitForm}/>
       </Box>
-    </FormStyle>
+    </form>
   )
 }
 

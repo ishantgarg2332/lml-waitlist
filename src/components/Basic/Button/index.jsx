@@ -11,10 +11,10 @@ const ButtonStyle = styled.button`
     padding: 11;
     font-size: 16px;
   }
-`
+`;
 
-function Button({ title }) {
-  return <ButtonStyle>{title.toUpperCase()}</ButtonStyle>
+function Button({ title, ...props }) {
+  return <ButtonStyle {...props}>{title.toUpperCase()}</ButtonStyle>
 }
 
 export default Button

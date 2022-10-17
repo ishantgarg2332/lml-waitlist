@@ -1,9 +1,10 @@
 import Form from 'components/Basic/Form'
-import Navbar from 'components/Basic/Navbar'
-import SuccessMessage from 'components/Basic/SuccessMessage'
 import { useState } from 'react'
 import styled from 'styled-components'
-import { device } from 'styles/BreakPoints'
+import { device } from 'styles/BreakPoints';
+import Loader from '../../../components/Loader'
+import axios from 'axios';
+import history from '../../../History'
 
 const FormSectionStyle = styled.section`
   width: 650px;
@@ -32,21 +33,28 @@ const FormWrapper = styled.div`
 `
 
 const FormSection = () => {
-  const [addedInList, setAddedInList] = useState(false)
+  const [loader, setLoader] = useState(false)
 
-  const handleAddedInList = () => {
-    setAddedInList(true)
+  const handleAddedInList = async ({name, email, code}) => {
+    if(!name || !email) return;
+    try{
+      setLoader(true);
+      // const response = await axios.post('/ url to api', {})
+      console.log({name, email, code});
+
+    setLoader(false);
+     history.replace('/dashboard', {});
+    }catch(err){
+      setLoader(false);
+      window.location.href = 'https://www.lmlemotion.com/'
+    }
   }
 
   return (
     <FormSectionStyle>
-      <Navbar />
+      <Loader loader={loader}/>
       <FormWrapper>
-        {!addedInList ? (
           <Form handleAddedInList={handleAddedInList} />
-        ) : (
-          <SuccessMessage message="You have been successfully added to the list!" />
-        )}
       </FormWrapper>
     </FormSectionStyle>
   )

@@ -1,5 +1,4 @@
 import { ReactComponent as MenuIcon } from 'assets/icons/hamburger.svg'
-import { ReactComponent as Logo } from 'assets/images/Logo.svg'
 import { useState } from 'react'
 import styled from 'styled-components'
 import { SmallDeviceShow } from 'styles/Global'
@@ -63,7 +62,8 @@ const CollapseNavbar = () => {
     <MenuWrapper>
       <CollapseNavbarStyle>
         <LogoWrapper>
-          <Logo />
+          {/* <Logo /> */}
+          <img src='https://images.squarespace-cdn.com/content/v1/631f031f841f9516b44d8878/a0bd2fa8-b606-4f5c-ac05-d2670b879e6d/LML-Logo-1.png?format=1500w' alt="lml"/>
         </LogoWrapper>
         <MenuIconWrapper>
           <MenuIcon onClick={handleMenuShow} />

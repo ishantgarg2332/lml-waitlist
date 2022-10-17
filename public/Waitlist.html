@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://localhost:3000/?name=&email= -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Waitlist</title>
+  <script defer="" src="./Waitlist_files/bundle.js.download"></script><style>@font-face {
+  font-family: 'Poppins';
+  src: url(http://localhost:3000/static/media/Poppins-Black.d8b850b920a5ef49d752.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url(http://localhost:3000/static/media/Poppins-ExtraBold.01849ee091e1762a5dd5.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url(http://localhost:3000/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url(http://localhost:3000/static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url(http://localhost:3000/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url(http://localhost:3000/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url(http://localhost:3000/static/media/Poppins-Light.7641a0f76ca9ef6c252c.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url(http://localhost:3000/static/media/Poppins-ExtraLight.333cb30c20e31999802a.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url(http://localhost:3000/static/media/Poppins-Thin.59ff6a729e30c99b478e.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 100;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9zdHlsZXMvcG9wcGluc0ZvbnRzLm1vZHVsZS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxzQkFBc0I7RUFDdEIsK0RBQXdFO0VBQ3hFLGtCQUFrQjtFQUNsQixnQkFBZ0I7QUFDbEI7QUFDQTtFQUNFLHNCQUFzQjtFQUN0QiwrREFBNEU7RUFDNUUsa0JBQWtCO0VBQ2xCLGdCQUFnQjtBQUNsQjtBQUNBO0VBQ0Usc0JBQXNCO0VBQ3RCLCtEQUF1RTtFQUN2RSxrQkFBa0I7RUFDbEIsZ0JBQWdCO0FBQ2xCO0FBQ0E7RUFDRSxzQkFBc0I7RUFDdEIsK0RBQTJFO0VBQzNFLGtCQUFrQjtFQUNsQixnQkFBZ0I7QUFDbEI7QUFDQTtFQUNFLHNCQUFzQjtFQUN0QiwrREFBeUU7RUFDekUsa0JBQWtCO0VBQ2xCLGdCQUFnQjtBQUNsQjtBQUNBO0VBQ0Usc0JBQXNCO0VBQ3RCLCtEQUEwRTtFQUMxRSxrQkFBa0I7RUFDbEIsZ0JBQWdCO0FBQ2xCO0FBQ0E7RUFDRSxzQkFBc0I7RUFDdEIsK0RBQXdFO0VBQ3hFLGtCQUFrQjtFQUNsQixnQkFBZ0I7QUFDbEI7QUFDQTtFQUNFLHNCQUFzQjtFQUN0QiwrREFBNkU7RUFDN0Usa0JBQWtCO0VBQ2xCLGdCQUFnQjtBQUNsQjtBQUNBO0VBQ0Usc0JBQXNCO0VBQ3RCLCtEQUF1RTtFQUN2RSxrQkFBa0I7RUFDbEIsZ0JBQWdCO0FBQ2xCIiwic291cmNlc0NvbnRlbnQiOlsiQGZvbnQtZmFjZSB7XHJcbiAgZm9udC1mYW1pbHk6ICdQb3BwaW5zJztcclxuICBzcmM6IHVybCgnLi4vYXNzZXRzL2ZvbnRzL3BvcHBpbnMvUG9wcGlucy1CbGFjay50dGYnKSBmb3JtYXQoJ3RydWV0eXBlJyk7XHJcbiAgZm9udC1zdHlsZTogbm9ybWFsO1xyXG4gIGZvbnQtd2VpZ2h0OiA5MDA7XHJcbn1cclxuQGZvbnQtZmFjZSB7XHJcbiAgZm9udC1mYW1pbHk6ICdQb3BwaW5zJztcclxuICBzcmM6IHVybCgnLi4vYXNzZXRzL2ZvbnRzL3BvcHBpbnMvUG9wcGlucy1FeHRyYUJvbGQudHRmJykgZm9ybWF0KCd0cnVldHlwZScpO1xyXG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcclxuICBmb250LXdlaWdodDogODAwO1xyXG59XHJcbkBmb250LWZhY2Uge1xyXG4gIGZvbnQtZmFtaWx5OiAnUG9wcGlucyc7XHJcbiAgc3JjOiB1cmwoJy4uL2Fzc2V0cy9mb250cy9wb3BwaW5zL1BvcHBpbnMtQm9sZC50dGYnKSBmb3JtYXQoJ3RydWV0eXBlJyk7XHJcbiAgZm9udC1zdHlsZTogbm9ybWFsO1xyXG4gIGZvbnQtd2VpZ2h0OiA3MDA7XHJcbn1cclxuQGZvbnQtZmFjZSB7XHJcbiAgZm9udC1mYW1pbHk6ICdQb3BwaW5zJztcclxuICBzcmM6IHVybCgnLi4vYXNzZXRzL2ZvbnRzL3BvcHBpbnMvUG9wcGlucy1TZW1pQm9sZC50dGYnKSBmb3JtYXQoJ3RydWV0eXBlJyk7XHJcbiAgZm9udC1zdHlsZTogbm9ybWFsO1xyXG4gIGZvbnQtd2VpZ2h0OiA2MDA7XHJcbn1cclxuQGZvbnQtZmFjZSB7XHJcbiAgZm9udC1mYW1pbHk6ICdQb3BwaW5zJztcclxuICBzcmM6IHVybCgnLi4vYXNzZXRzL2ZvbnRzL3BvcHBpbnMvUG9wcGlucy1NZWRpdW0udHRmJykgZm9ybWF0KCd0cnVldHlwZScpO1xyXG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcclxuICBmb250LXdlaWdodDogNTAwO1xyXG59XHJcbkBmb250LWZhY2Uge1xyXG4gIGZvbnQtZmFtaWx5OiAnUG9wcGlucyc7XHJcbiAgc3JjOiB1cmwoJy4uL2Fzc2V0cy9mb250cy9wb3BwaW5zL1BvcHBpbnMtUmVndWxhci50dGYnKSBmb3JtYXQoJ3RydWV0eXBlJyk7XHJcbiAgZm9udC1zdHlsZTogbm9ybWFsO1xyXG4gIGZvbnQtd2VpZ2h0OiA0MDA7XHJcbn1cclxuQGZvbnQtZmFjZSB7XHJcbiAgZm9udC1mYW1pbHk6ICdQb3BwaW5zJztcclxuICBzcmM6IHVybCgnLi4vYXNzZXRzL2ZvbnRzL3BvcHBpbnMvUG9wcGlucy1MaWdodC50dGYnKSBmb3JtYXQoJ3RydWV0eXBlJyk7XHJcbiAgZm9udC1zdHlsZTogbm9ybWFsO1xyXG4gIGZvbnQtd2VpZ2h0OiAzMDA7XHJcbn1cclxuQGZvbnQtZmFjZSB7XHJcbiAgZm9udC1mYW1pbHk6ICdQb3BwaW5zJztcclxuICBzcmM6IHVybCgnLi4vYXNzZXRzL2ZvbnRzL3BvcHBpbnMvUG9wcGlucy1FeHRyYUxpZ2h0LnR0ZicpIGZvcm1hdCgndHJ1ZXR5cGUnKTtcclxuICBmb250LXN0eWxlOiBub3JtYWw7XHJcbiAgZm9udC13ZWlnaHQ6IDIwMDtcclxufVxyXG5AZm9udC1mYWNlIHtcclxuICBmb250LWZhbWlseTogJ1BvcHBpbnMnO1xyXG4gIHNyYzogdXJsKCcuLi9hc3NldHMvZm9udHMvcG9wcGlucy9Qb3BwaW5zLVRoaW4udHRmJykgZm9ybWF0KCd0cnVldHlwZScpO1xyXG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcclxuICBmb250LXdlaWdodDogMTAwO1xyXG59XHJcbiJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>@font-face {
+  font-family: 'Montserrat';
+  src: url(http://localhost:3000/static/media/Montserrat-Black.1b9fba4a75b89b0dd96a.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url(http://localhost:3000/static/media/Montserrat-ExtraBold.5daafc620ecc802516f9.ttf)
+    format('truetype');
+  font-style: normal;
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url(http://localhost:3000/static/media/Montserrat-Bold.63fae500fdcf19ce83d4.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url(http://localhost:3000/static/media/Montserrat-SemiBold.04af9a9e62bb4c47bd55.ttf)
+    format('truetype');
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url(http://localhost:3000/static/media/Montserrat-Medium.3a0917345468c959207a.ttf)
+    format('truetype');
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url(http://localhost:3000/static/media/Montserrat-Regular.ac98a5f5ca71180fe293.ttf)
+    format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url(http://localhost:3000/static/media/Montserrat-Light.f0963fd9968fbd54cc35.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url(http://localhost:3000/static/media/Montserrat-ExtraLight.b70ef3d0e89b27907868.ttf)
+    format('truetype');
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url(http://localhost:3000/static/media/Montserrat-Thin.e8ecb9f79ef9cbd2d9a8.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 100;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9zdHlsZXMvbW9udHNlcnJhdEZvbnRzLm1vZHVsZS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSx5QkFBeUI7RUFDekIsK0RBQThFO0VBQzlFLGtCQUFrQjtFQUNsQixnQkFBZ0I7QUFDbEI7QUFDQTtFQUNFLHlCQUF5QjtFQUN6QjtzQkFDb0I7RUFDcEIsa0JBQWtCO0VBQ2xCLGdCQUFnQjtBQUNsQjtBQUNBO0VBQ0UseUJBQXlCO0VBQ3pCLCtEQUE2RTtFQUM3RSxrQkFBa0I7RUFDbEIsZ0JBQWdCO0FBQ2xCO0FBQ0E7RUFDRSx5QkFBeUI7RUFDekI7c0JBQ29CO0VBQ3BCLGtCQUFrQjtFQUNsQixnQkFBZ0I7QUFDbEI7QUFDQTtFQUNFLHlCQUF5QjtFQUN6QjtzQkFDb0I7RUFDcEIsa0JBQWtCO0VBQ2xCLGdCQUFnQjtBQUNsQjtBQUNBO0VBQ0UseUJBQXlCO0VBQ3pCO3NCQUNvQjtFQUNwQixrQkFBa0I7RUFDbEIsZ0JBQWdCO0FBQ2xCO0FBQ0E7RUFDRSx5QkFBeUI7RUFDekIsK0RBQThFO0VBQzlFLGtCQUFrQjtFQUNsQixnQkFBZ0I7QUFDbEI7QUFDQTtFQUNFLHlCQUF5QjtFQUN6QjtzQkFDb0I7RUFDcEIsa0JBQWtCO0VBQ2xCLGdCQUFnQjtBQUNsQjtBQUNBO0VBQ0UseUJBQXlCO0VBQ3pCLCtEQUE2RTtFQUM3RSxrQkFBa0I7RUFDbEIsZ0JBQWdCO0FBQ2xCIiwic291cmNlc0NvbnRlbnQiOlsiQGZvbnQtZmFjZSB7XHJcbiAgZm9udC1mYW1pbHk6ICdNb250c2VycmF0JztcclxuICBzcmM6IHVybCgnLi4vYXNzZXRzL2ZvbnRzL21vbnRzZXJyYXQvTW9udHNlcnJhdC1CbGFjay50dGYnKSBmb3JtYXQoJ3RydWV0eXBlJyk7XHJcbiAgZm9udC1zdHlsZTogbm9ybWFsO1xyXG4gIGZvbnQtd2VpZ2h0OiA5MDA7XHJcbn1cclxuQGZvbnQtZmFjZSB7XHJcbiAgZm9udC1mYW1pbHk6ICdNb250c2VycmF0JztcclxuICBzcmM6IHVybCgnLi4vYXNzZXRzL2ZvbnRzL21vbnRzZXJyYXQvTW9udHNlcnJhdC1FeHRyYUJvbGQudHRmJylcclxuICAgIGZvcm1hdCgndHJ1ZXR5cGUnKTtcclxuICBmb250LXN0eWxlOiBub3JtYWw7XHJcbiAgZm9udC13ZWlnaHQ6IDgwMDtcclxufVxyXG5AZm9udC1mYWNlIHtcclxuICBmb250LWZhbWlseTogJ01vbnRzZXJyYXQnO1xyXG4gIHNyYzogdXJsKCcuLi9hc3NldHMvZm9udHMvbW9udHNlcnJhdC9Nb250c2VycmF0LUJvbGQudHRmJykgZm9ybWF0KCd0cnVldHlwZScpO1xyXG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcclxuICBmb250LXdlaWdodDogNzAwO1xyXG59XHJcbkBmb250LWZhY2Uge1xyXG4gIGZvbnQtZmFtaWx5OiAnTW9udHNlcnJhdCc7XHJcbiAgc3JjOiB1cmwoJy4uL2Fzc2V0cy9mb250cy9tb250c2VycmF0L01vbnRzZXJyYXQtU2VtaUJvbGQudHRmJylcclxuICAgIGZvcm1hdCgndHJ1ZXR5cGUnKTtcclxuICBmb250LXN0eWxlOiBub3JtYWw7XHJcbiAgZm9udC13ZWlnaHQ6IDYwMDtcclxufVxyXG5AZm9udC1mYWNlIHtcclxuICBmb250LWZhbWlseTogJ01vbnRzZXJyYXQnO1xyXG4gIHNyYzogdXJsKCcuLi9hc3NldHMvZm9udHMvbW9udHNlcnJhdC9Nb250c2VycmF0LU1lZGl1bS50dGYnKVxyXG4gICAgZm9ybWF0KCd0cnVldHlwZScpO1xyXG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcclxuICBmb250LXdlaWdodDogNTAwO1xyXG59XHJcbkBmb250LWZhY2Uge1xyXG4gIGZvbnQtZmFtaWx5OiAnTW9udHNlcnJhdCc7XHJcbiAgc3JjOiB1cmwoJy4uL2Fzc2V0cy9mb250cy9tb250c2VycmF0L01vbnRzZXJyYXQtUmVndWxhci50dGYnKVxyXG4gICAgZm9ybWF0KCd0cnVldHlwZScpO1xyXG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcclxuICBmb250LXdlaWdodDogNDAwO1xyXG59XHJcbkBmb250LWZhY2Uge1xyXG4gIGZvbnQtZmFtaWx5OiAnTW9udHNlcnJhdCc7XHJcbiAgc3JjOiB1cmwoJy4uL2Fzc2V0cy9mb250cy9tb250c2VycmF0L01vbnRzZXJyYXQtTGlnaHQudHRmJykgZm9ybWF0KCd0cnVldHlwZScpO1xyXG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcclxuICBmb250LXdlaWdodDogMzAwO1xyXG59XHJcbkBmb250LWZhY2Uge1xyXG4gIGZvbnQtZmFtaWx5OiAnTW9udHNlcnJhdCc7XHJcbiAgc3JjOiB1cmwoJy4uL2Fzc2V0cy9mb250cy9tb250c2VycmF0L01vbnRzZXJyYXQtRXh0cmFMaWdodC50dGYnKVxyXG4gICAgZm9ybWF0KCd0cnVldHlwZScpO1xyXG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcclxuICBmb250LXdlaWdodDogMjAwO1xyXG59XHJcbkBmb250LWZhY2Uge1xyXG4gIGZvbnQtZmFtaWx5OiAnTW9udHNlcnJhdCc7XHJcbiAgc3JjOiB1cmwoJy4uL2Fzc2V0cy9mb250cy9tb250c2VycmF0L01vbnRzZXJyYXQtVGhpbi50dGYnKSBmb3JtYXQoJ3RydWV0eXBlJyk7XHJcbiAgZm9udC1zdHlsZTogbm9ybWFsO1xyXG4gIGZvbnQtd2VpZ2h0OiAxMDA7XHJcbn1cclxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style><style data-styled="active" data-styled-version="5.3.5">.jstXmK{width:100%;max-width:1360px;margin:0 auto;padding:0 30px;max-width:1100px;}.hKOvWP{margin-top:calc(50 * 1px);}.bAozXK{margin-top:calc(50 * 1px);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;}@media (max-width:600px){.bAozXK{display:none;}}.iNzIlK{margin-top:calc(40 * 1px);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;}.fgtSLF{position:relative;}@media screen and (min-width:600px){.fgtSLF{display:none;}}.hPimwt{height:70px;background:#FFFFFF;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0 30px;}.bAtGUK{width:125px;}.bAtGUK svg{width:100%;height:100%;fill:#594F43;}.ia-DcwH{cursor:pointer;}.ia-DcwH svg{fill:#594F43;}.fvfkab{background:#FFC80A;border-radius:26px;padding:16px 30px;font-size:20px;font-weight:700;}@media (max-width:900px){.fvfkab{padding:11;font-size:16px;}}.eMTozc{margin-top:40px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:relative;}@media (max-width:600px){.eMTozc{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;margin-top:30px;}}.btAmBE{font-size:28px;color:#594F43;font-weight:900;margin-right:50px;margin-top:10px;}@media (max-width:1280px){.btAmBE{font-size:24px;margin-right:40px;margin-top:unset;}}@media (max-width:600px){.btAmBE{font-size:16px;margin-bottom:10px;margin-right:unset;}}.hwuUsP{outline:none;border:none;border-bottom:1px solid #C7C7C7;background-color:transparent;padding-bottom:12px;font-size:28px;font-weight:700;width:100%;color:#594F43;}@media (max-width:1280px){.hwuUsP{font-size:24px;padding-bottom:9px;}}@media (max-width:1280px){.hwuUsP{font-size:16px;padding-bottom:9px;}}.hwuUsP::placeholder{font-size:28px;color:#C7C7C7;font-weight:800;}@media (max-width:1280px){.hwuUsP::-webkit-input-placeholder{font-size:24px;}.hwuUsP::-moz-placeholder{font-size:24px;}.hwuUsP:-ms-input-placeholder{font-size:24px;}.hwuUsP::placeholder{font-size:24px;}}@media (max-width:600px){.hwuUsP::placeholder{font-size:16px;}}.dMLSiX{position:absolute;right:20px;top:25%;}@media (max-width:600px){.dMLSiX{top:55%;}}.bmdgSe{font-size:16px;color:#000000;}.bmdgSe svg{margin-right:16px;}@media (max-width:600px){.bmdgSe{display:none;}}.ghNMYY{width:650px;margin:0 auto;padding:50px 30px 30px 30px;}@media (max-width:1280px){.ghNMYY{width:550px;}}@media (max-width:900px){.ghNMYY{width:500px;width:100%;}}@media (max-width:600px){.ghNMYY{padding-bottom:200px;padding-top:0;}}.LSgMY{margin-top:17vh;}@media (max-width:1280px){}@media (max-width:600px){.LSgMY{margin-top:10px;}}.kdSDMm{margin-top:19px;}.kdSDMm span{font-size:20px;color:#777777;margin-left:23px;}.iETVcS{background:#FAFAFA;}.jNefcn{max-width:500px;margin:0 auto;padding:30px;}@media (max-width:1280px){.jNefcn{padding-top:20px;}}@media (max-width:600px){}.cPGWOq{font-size:72px;font-weight:900;line-height:1.1;color:#000000;margin-top:14vh;}@media (max-width:900px){.cPGWOq{font-size:60px;}}@media (max-width:600px){.cPGWOq{margin-top:60px;margin-top:40px;text-align:center;}}.jSFSdC{width:200px;}.jSFSdC svg{width:100%;height:100%;fill:#594F43;}.jSFSdC svg path{fill:#FFC80A;}@media (max-width:600px){.jSFSdC{display:none;}}.cRHkTF{height:100vh;position:relative;overflow:hidden;}@media (max-width:600px){.cRHkTF{height:unset;}}.idMHRA{display:grid;grid-template-columns:1fr 1fr;height:100%;}@media (max-width:600px){.idMHRA{grid-template-columns:unset;}}.fZPkuP{display:grid;grid-template-columns:40fr 30fr 30fr;grid-column-gap:40px;padding-top:50px;padding-bottom:50px;justify-items:end;}@media (max-width:600px){.fZPkuP{grid-template-columns:unset;justify-items:start;grid-row-gap:30px;grid-column-gap:unset;padding-top:30px;padding-bottom:30px;}}.jsjnaN h6{font-size:28px;font-weight:800;color:#000000;}.jsjnaN ul{margin-top:40px;}@media (max-width:600px){.jsjnaN ul{margin-top:24px;}}.jsjnaN ul li{font-size:20px;color:#777777;margin-top:30px;}@media (max-width:600px){.jsjnaN ul li{margin-top:18px;}}.IcrZO p{line-height:1.3;font-size:20px;color:#000000;margin-top:20px;}@media (max-width:600px){.fYuEdg{display:none;}}.bpazfl{background:#FFC80A;border-radius:29px;padding:6px 18px;font-size:10px;font-weight:700;color:#000000;cursor:pointer;margin-left:10px;margin-bottom:10px;}.cVcVRy{width:200px;}.cVcVRy svg{width:100%;height:100%;fill:#594F43;}.cVcVRy svg path{fill:#FFC80A;}.jGtCND{display:none;}@media (max-width:600px){.jGtCND{display:block;font-size:16px;color:#000000;text-align:center;margin-bottom:30px;}}*,*::before,*::after{box-sizing:border-box;}html{font-size:100%;}body{margin:0;padding:0;overflow-x:hidden;min-height:100vh;text-rendering:optimizeSpeed;font-family:Poppins,sans-serif;font-size:1rem;color:#000000;background-color:#FFFFFF;line-height:1;}h1,h2,h3,h4,h5,h6,p,ul,figure,blockquote,dl,form,input,dd{padding:0;margin:0;}a{-webkit-text-decoration:none;text-decoration:none;}button{border:none;background-color:transparent;font-family:inherit;padding:0;cursor:pointer;}ul[role="list"],ol[role="list"]{list-style:none;}li{list-style-type:none;}html:focus-within{-webkit-scroll-behavior:smooth;-moz-scroll-behavior:smooth;-ms-scroll-behavior:smooth;scroll-behavior:smooth;}a:not([class]){-webkit-text-decoration-skip-ink:auto;text-decoration-skip-ink:auto;}img,picture{max-width:100%;display:block;}input,button,textarea,select{font:inherit;}@media (prefers-reduced-motion:reduce){html:focus-within{-webkit-scroll-behavior:auto;-moz-scroll-behavior:auto;-ms-scroll-behavior:auto;scroll-behavior:auto;}*,*::before,*::after{-webkit-animation-duration:0.01ms !important;animation-duration:0.01ms !important;-webkit-animation-iteration-count:1 !important;animation-iteration-count:1 !important;-webkit-transition-duration:0.01ms !important;transition-duration:0.01ms !important;-webkit-scroll-behavior:auto !important;-moz-scroll-behavior:auto !important;-ms-scroll-behavior:auto !important;scroll-behavior:auto !important;}}</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><section class="sc-dmRaPn cRHkTF"><div class="sc-hKMtZM fgtSLF"><div class="sc-eCYdqJ hPimwt"><div class="sc-jSMfEi bAtGUK"><img src="./Waitlist_files/LML-Logo-1.png" alt="lml"></div><div class="sc-gKXOVf ia-DcwH"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="24" viewBox="0 0 52 24"><g id="Group_9" data-name="Group 9" transform="translate(-294 -47)"><rect id="Rectangle_3" data-name="Rectangle 3" width="42" height="4" rx="2" transform="translate(304 47)"></rect><rect id="Rectangle_5" data-name="Rectangle 5" width="42" height="4" rx="2" transform="translate(304 67)"></rect><rect id="Rectangle_4" data-name="Rectangle 4" width="52" height="4" rx="2" transform="translate(294 57)"></rect></g></svg></div></div></div><div class="sc-kgflAQ idMHRA"><section class="sc-bjUoiL iETVcS"><div class="sc-idiyUo jNefcn"><div class="sc-hHLeRK jSFSdC"><img src="./Waitlist_files/LML-Logo-1.png" alt="lml"></div><h1 class="sc-dIouRR cPGWOq">GET IN TOUCH WITH US</h1><div class="sc-dkzDqf hKOvWP"><div class="sc-fEOsli kdSDMm"><svg xmlns="http://www.w3.org/2000/svg" width="14.286" height="11.099" viewBox="0 0 14.286 11.099"><path id="Mail" d="M14.753,11.564a1.235,1.235,0,0,1-.9.37H2.117a1.233,1.233,0,0,1-.9-.37,1.208,1.208,0,0,1-.375-.891V4.414a4.247,4.247,0,0,0,.805.686Q4.533,7.038,5.609,7.819q.454.331.738.517a4.585,4.585,0,0,0,.753.378,2.313,2.313,0,0,0,.877.193h.016a2.317,2.317,0,0,0,.877-.193,4.669,4.669,0,0,0,.753-.378q.284-.186.737-.517Q11.716,6.85,14.33,5.1a4.415,4.415,0,0,0,.8-.686v6.259A1.209,1.209,0,0,1,14.753,11.564Zm-.989-7.308-3.73,2.562c-.053.037-.167.117-.339.24s-.316.224-.431.3-.252.161-.414.256a2.373,2.373,0,0,1-.459.213,1.284,1.284,0,0,1-.4.071H7.977a1.3,1.3,0,0,1-.4-.071,2.394,2.394,0,0,1-.458-.213c-.162-.094-.3-.18-.415-.256s-.258-.176-.43-.3l-.339-.24q-.726-.5-2.089-1.439T2.213,4.256a3.969,3.969,0,0,1-.933-.91A1.832,1.832,0,0,1,.842,2.27a1.577,1.577,0,0,1,.331-1.025,1.143,1.143,0,0,1,.944-.41H13.852a1.238,1.238,0,0,1,.9.371,1.2,1.2,0,0,1,.379.89,2.063,2.063,0,0,1-.391,1.19A3.755,3.755,0,0,1,13.764,4.256Z" transform="translate(-0.842 -0.835)" fill="#ffc80a" fill-rule="evenodd"></path></svg><span>info@lmlemotion.com</span></div></div></div></section><section class="sc-hAZoDl ghNMYY"><div class="sc-fnykZs LSgMY"><form class="sc-crXcEl"><div class="sc-papXJ eMTozc"><label class="sc-jqUVSM btAmBE">Name</label><input name="name" type="text" placeholder="Your Name" class="sc-kDDrLX hwuUsP" value=""><div class="sc-iqcoie dMLSiX"><svg xmlns="http://www.w3.org/2000/svg" width="12.089" height="12.455" viewBox="0 0 12.089 12.455"><path id="Path_19" data-name="Path 19" d="M2698.549,886.448l1.2,2.165-4.629,1.932,4.663,1.9-1.266,2.231-4.03-2.931.533,5.029h-2.5l.5-5.029-4.03,2.964-1.3-2.265,4.629-1.932-4.629-1.865,1.232-2.231,4.129,2.964-.533-5.062h2.531l-.566,5.062Z" transform="translate(-2687.693 -884.317)" fill="#f9593a"></path></svg></div></div><div class="sc-papXJ eMTozc"><label class="sc-jqUVSM btAmBE">Email</label><input name="email" type="email" placeholder="Your Email" class="sc-kDDrLX hwuUsP" value=""><div class="sc-iqcoie dMLSiX"><svg xmlns="http://www.w3.org/2000/svg" width="12.089" height="12.455" viewBox="0 0 12.089 12.455"><path id="Path_19" data-name="Path 19" d="M2698.549,886.448l1.2,2.165-4.629,1.932,4.663,1.9-1.266,2.231-4.03-2.931.533,5.029h-2.5l.5-5.029-4.03,2.964-1.3-2.265,4.629-1.932-4.629-1.865,1.232-2.231,4.129,2.964-.533-5.062h2.531l-.566,5.062Z" transform="translate(-2687.693 -884.317)" fill="#f9593a"></path></svg></div></div><div class="sc-dkzDqf bAozXK"><span class="sc-evZas bmdgSe"><svg xmlns="http://www.w3.org/2000/svg" width="12.089" height="12.455" viewBox="0 0 12.089 12.455"><path id="Path_19" data-name="Path 19" d="M2698.549,886.448l1.2,2.165-4.629,1.932,4.663,1.9-1.266,2.231-4.03-2.931.533,5.029h-2.5l.5-5.029-4.03,2.964-1.3-2.265,4.629-1.932-4.629-1.865,1.232-2.231,4.129,2.964-.533-5.062h2.531l-.566,5.062Z" transform="translate(-2687.693 -884.317)" fill="#f9593a"></path></svg>Required field</span></div><div class="sc-dkzDqf iNzIlK"><button type="submit" class="sc-ftvSup fvfkab">JOIN THE WAITLIST</button></div></form></div></section></div></section><div class="sc-bczRLJ jstXmK"><section class="sc-bBrHrO fZPkuP"><div class="sc-cxabCf IcrZO"><div class="sc-gicCDI cVcVRy"><img src="./Waitlist_files/LML-Logo-1.png" alt="lml"></div><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere tincidunt tortor porta eu, facilisi ut.</p><p class="sc-llJcti fYuEdg">Copyright © 2022 Abdul Basit</p></div></div><div class="sc-ivTmOn jsjnaN"><h6>Company</h6><ul><li>Home</li><li>Careers<span class="sc-iIPllB bpazfl">Hiring!</span></li><li>Services</li></ul></div><div class="sc-ivTmOn jsjnaN"><h6>Resources</h6><ul><li>Blog</li><li>Products</li><li>Services</li></ul></div></section><p class="sc-ezWOiH jGtCND">Copyright © 2022 Abdul Basit</p></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  
+
+</body></html>

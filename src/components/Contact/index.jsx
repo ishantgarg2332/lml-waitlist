@@ -16,12 +16,12 @@ function Contact() {
     <>
       <ContactStyle>
         <Mail />
-        <span>person.name@gmail.com</span>
+        <span>info@lmlemotion.com</span>
       </ContactStyle>
-      <ContactStyle>
+      {/* <ContactStyle>
         <Phone />
         <span>+1 267-618-1593</span>
-      </ContactStyle>
+      </ContactStyle> */}
     </>
   )
 }

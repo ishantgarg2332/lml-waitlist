@@ -103,14 +103,14 @@ function BasicFooter() {
       <FooterWrapper columns={3} py={50} cgp={40} end>
         <LogoStyle>
           <FooterLogo>
-            <Logo />
+          <img src='https://images.squarespace-cdn.com/content/v1/631f031f841f9516b44d8878/a0bd2fa8-b606-4f5c-ac05-d2670b879e6d/LML-Logo-1.png?format=1500w' alt="lml"/>
           </FooterLogo>
           <div>
-            <p>{subtitle}</p>
-            <CopyRights>{copyRights}</CopyRights>
+            <p style={{marginLeft:"45px"}}>{subtitle}</p>
+            {/* <CopyRights>{copyRights}</CopyRights> */}
           </div>
         </LogoStyle>
-        <FooterSection>
+        {/* <FooterSection>
           <h6>{sectionTwo.title}</h6>
           <ul>
             {sectionTwo.company.map(({ name, tag }) => (
@@ -128,9 +128,12 @@ function BasicFooter() {
               <li key={name}>{name}</li>
             ))}
           </ul>
+        </FooterSection> */}
+        <FooterSection style={{marginTop: '50px'}}>
+          <CopyRights>{copyRights}</CopyRights>
         </FooterSection>
       </FooterWrapper>
-      <FooterLastSection>{copyRights}</FooterLastSection>
+      {/* <FooterLastSection>{copyRights}</FooterLastSection> */}
     </Container>
   )
 }

@@ -2,8 +2,8 @@ export const footer = {
   sectionOne: {
     logo: 'Hello',
     subtitle:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere tincidunt tortor porta eu, facilisi ut.',
-    copyRights: 'Copyright © 2022 Abdul Basit',
+      'A NEW EMOTION',
+    copyRights: 'Copyright ©  LML EMOTION 2022',
   },
   sectionTwo: {
     title: 'Company',

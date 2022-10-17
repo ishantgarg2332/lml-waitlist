@@ -1,5 +1,4 @@
 import { ReactComponent as FooterSVG } from 'assets/images/FooterSVG.svg'
-import { ReactComponent as Logo } from 'assets/images/Logo.svg'
 import Contact from 'components/Contact'
 import styled from 'styled-components'
 import { Box, Container } from 'styles/Global'
@@ -94,7 +93,7 @@ function ClassicFooter() {
             eiusmod tempor incididunt ut labore et dolore.
           </p>
           <LogoWrapper>
-            <Logo />
+          <img src='https://images.squarespace-cdn.com/content/v1/631f031f841f9516b44d8878/a0bd2fa8-b606-4f5c-ac05-d2670b879e6d/LML-Logo-1.png?format=1500w' alt="lml"/>
           </LogoWrapper>
         </FooterInfo>
       </Container>

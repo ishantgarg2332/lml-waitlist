@@ -1,9 +1,10 @@
-import { ReactComponent as Logo } from 'assets/images/Logo.svg'
 import Contact from 'components/Contact'
 import React from 'react'
 import styled from 'styled-components'
 import { device } from 'styles/BreakPoints'
 import { Box, SmallDevicesHidden } from 'styles/Global'
+import Tooltip from 'react-tooltip';
+import Info from '../../../assets/images/info.gif'
 
 const SectionWrapper = styled.section`
   background: ${({ theme }) => theme.colors.secondary};
@@ -21,7 +22,8 @@ const ContentWrapper = styled.div`
   }
 `
 
-const WelcomeMessage = styled.h1`
+const  WelcomeMessage = styled.h1`
+  position: relative;
   font-size: 72px;
   font-weight: 900;
   line-height: 1.1;
@@ -51,14 +53,36 @@ const LogoWrapper = styled.div`
   ${SmallDevicesHidden}
 `
 
+const tooltipMessage = `
+  Join our waitlist for our exciting products. 
+  By joining our waitlist, we will prioritize you to get our brand new EV.
+  Isn't that great!!!
+`;
+
 function WelcomeSection({ message }) {
   return (
     <SectionWrapper>
       <ContentWrapper>
         <LogoWrapper>
-          <Logo />
+        <img src='https://images.squarespace-cdn.com/content/v1/631f031f841f9516b44d8878/a0bd2fa8-b606-4f5c-ac05-d2670b879e6d/LML-Logo-1.png?format=1500w' alt="lml"/>
         </LogoWrapper>
-        <WelcomeMessage>{message}</WelcomeMessage>
+        <div style={{
+          display: 'flex'
+        }}>
+          <WelcomeMessage>
+            <>
+            {message}
+            </>
+            <img src={Info} alt="info" style={{
+              height: '40px', 
+              width: '40px',
+              position: 'absolute',
+              right: 70,
+              bottom: 25
+            }} data-tip={tooltipMessage}/>
+          </WelcomeMessage>
+        </div>
+        <Tooltip />
         <Box mt={50}>
           <Contact />
         </Box>

@@ -5,6 +5,7 @@ import useForm from 'hooks/useForm'
 import styled from 'styled-components'
 import { device } from 'styles/BreakPoints'
 import { Box } from 'styles/Global'
+import {useEffect} from 'react';
 
 
 const TextStyle = styled.span`
@@ -19,7 +20,10 @@ const TextStyle = styled.span`
 `
 
 const Form = ({ handleAddedInList }) => {
-  const { user, onChangeInput, onSubmitForm } = useForm({ name: '', email: '', code: '' })
+
+  const referralCode = window.location.href.split('?')[1] ? window.location.href.split('?')[1].split('=')[1] : '';
+
+  const { user, onChangeInput } = useForm({ name: '', email: '', code: referralCode })
 
   const { name, email, code } = user
 
@@ -28,6 +32,7 @@ const Form = ({ handleAddedInList }) => {
       name, email, code
     })
   }
+
 
   return (
     <form>
@@ -70,7 +75,10 @@ const Form = ({ handleAddedInList }) => {
         </TextStyle>
       </Box>
       <Box mt={40} flxRight>
-        <Button title="Join the waitlist" type="submit" onClick={submitForm}/>
+        <Button title="Join the waitlist" type="submit" onClick={(e) => {
+          e.preventDefault();
+          submitForm();
+          }}/>
       </Box>
     </form>
   )

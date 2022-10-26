@@ -4,7 +4,8 @@ import styled from 'styled-components'
 import { device } from 'styles/BreakPoints';
 import Loader from '../../../components/Loader'
 import axios from 'axios';
-import history from '../../../History'
+import history from '../../../History';
+import config from '../../../api-config.js';
 
 const FormSectionStyle = styled.section`
   width: 650px;
@@ -39,11 +40,13 @@ const FormSection = () => {
     if(!name || !email) return;
     try{
       setLoader(true);
-      // const response = await axios.post('/ url to api', {})
-      console.log({name, email, code});
-
+      await axios.post(`${config.API_BASE_URL}/user`, {
+        name,
+        email,
+        code
+      });
+    history.replace('/dashboard', {email});
     setLoader(false);
-     history.replace('/dashboard', {});
     }catch(err){
       setLoader(false);
       window.location.href = 'https://www.lmlemotion.com/'

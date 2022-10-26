@@ -1,5 +1,6 @@
 import light from 'assets/images/desktop-basic-light.png'
-import BasicLight from 'screens/BasicLight'
+import BasicLight from 'screens/BasicLight';
+import UserDashboard from 'screens/UserDashboard';
 
 const routes = [
   {
@@ -11,7 +12,7 @@ const routes = [
   {
     path: '/dashboard',
     title: 'Basic Light',
-    component: <div>lksdnmlkvnm</div>,
+    component: <UserDashboard />,
     preview: light,
   },
 ]

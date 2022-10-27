@@ -36,7 +36,7 @@ const FormSection = () => {
 
   const handleAddedInList = async ({name, email, code}) => {
     if(!name || !email) return;
-    try{ 
+    try{
       setLoader(true);
       await fetch(`${config.API_BASE_URL}/user`, { method: 'POST',
       headers: {

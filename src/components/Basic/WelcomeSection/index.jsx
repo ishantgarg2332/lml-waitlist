@@ -4,10 +4,10 @@ import styled from 'styled-components'
 import { device } from 'styles/BreakPoints'
 import { Box, SmallDevicesHidden } from 'styles/Global'
 import Tooltip from 'react-tooltip';
-import Info from '../../../assets/images/info.gif'
+import Info from '../../../assets/images/info.png'
 
 const SectionWrapper = styled.section`
-  background: ${({ theme }) => theme.colors.secondary};
+  background: hsl(343, 57%, 93%);
 `
 
 const ContentWrapper = styled.div`

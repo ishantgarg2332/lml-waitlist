@@ -27,7 +27,8 @@ const UserDashboard = () => {
             const response = await fetch(`${config.API_BASE_URL}/user/${params.email}`, {
                 method:'GET',
                 headers: {
-                    'Access-Control-Allow-Origin': '*'
+                    'Access-Control-Allow-Origin': '*',
+                    crossDomain: true
                 }
             });
             const userData = await response.json();

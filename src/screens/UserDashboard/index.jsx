@@ -22,10 +22,10 @@ const UserDashboard = () => {
        return paramsObj;
     }
 
-    async function fetchUserDetails() {
+    async function fetchUserDetails(params) {
         try{
             setLoader(true);
-            const response = await axios.get(`${config.API_BASE_URL}/user/${paramsObj.email}`);
+            const response = await axios.get(`${config.API_BASE_URL}/user/${params.email}`);
             if(response.status === 200){
                 setUserDetails({...response?.data})
             }
@@ -35,11 +35,12 @@ const UserDashboard = () => {
         }
     }
 
-    useEffect(() => {       
-        setParamsObj(getAllQueryParams());
-        fetchUserDetails();
+    useEffect(() => {
+        const paramsObj = getAllQueryParams();      
+        setParamsObj(paramsObj);
+        fetchUserDetails(paramsObj);
     }, []);
-    
+
     return <>
     {loader ? <Loader loader={loader}/> :
     <>
@@ -68,7 +69,7 @@ const UserDashboard = () => {
             }}>Welcome {paramsObj?.name?.split('+')?.[0]} 🎉🎉🎉</p>
         </header>
         <main>
-            <RankCard />
+            <RankCard rank={userDetails?.data?.rank} code={userDetails?.data?.referralcode} email={userDetails?.data?.email}/>
         </main>
         </>}
     </>

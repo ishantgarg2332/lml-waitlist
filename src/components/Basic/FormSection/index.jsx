@@ -48,7 +48,7 @@ const FormSection = () => {
         'Content-Type': 'application/x-www-form-urlencoded',
         'Access-Control-Allow-Origin': '*'
       });
-    history.replace('/dashboard', {email});
+      window.location.assign(`http://localhost:3000/dashboard?email=${email}&name=${name}`);
     setLoader(false);
     }catch(err){
       setLoader(false);

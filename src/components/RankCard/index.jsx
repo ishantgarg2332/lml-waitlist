@@ -1,7 +1,17 @@
 import Styled from 'styled-components';
-import { useEffect, useState } from 'react';
-import  {generate as referralCodesGenerate} from 'referral-codes'
 import Copy from '../../assets/images/copy.png';
+import toast, { Toaster } from 'react-hot-toast';
+import { 
+  FacebookShareButton, 
+  WhatsappShareButton, 
+  TwitterShareButton,
+  FacebookIcon,
+  WhatsappIcon,
+  TwitterIcon
+} from 'react-share';
+
+import Config from '../../api-config';
+import axios from 'axios';
 
 const CardWrapper = Styled.div`
   overflow: hidden;
@@ -28,53 +38,70 @@ const CardBody = Styled.div`
   padding-left: 32px;
   textAlign: center;
 `
-const UpArrowUrl = 'https://www.clker.com/cliparts/E/r/B/g/6/3/up-arrow-green.svg.med.png';
-
-const DownArrowUrl = 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Red_Arrow_Down.svg/1024px-Red_Arrow_Down.svg.png';
 
 function CopyToClipBoard() {
   const copyText = document.getElementsByClassName("copyReferral")[0];
-  copyText.setSelectionRange(0, 99999);
-  copyText.select();
-  navigator.clipboard.writeText(copyText.value);
+  const input = document.createElement("textarea");
+  input.value = copyText.textContent;
+  document.body.appendChild(input);
+  input.select();
+  document.execCommand("Copy");
+  input.remove();
+  toast.success('Copied!')
 }
 
-function generateReferralCode(email){
-  return referralCodesGenerate({
-    length: 20,
-    count: 1,
-    charset: `0123456789${email}`,
-  })[0]
-}
 
 const RankCard = ({
-  isRankUp = true,
-  email = "abc@xyz.com",
-  name,
+  email,
   code,
+  rank,
 }) => {
+  const shareUrl = `https://lml-waitlist.vercel.app/?code=${code}`
+
+  const shareQuote= 'Checkout LML\'s new EV with exciting features';
+
+  function updateServerOnShareAction(app) {
+    axios.patch(`${Config.API_BASE_URL}/user/${email}`, {
+      shareChannel: app
+    }).then().catch(() => {}) 
+  }
 
     return <CardWrapper>
+      <Toaster />
         <CardHeading>
           <p>
-          Waitlist Rank #1298 <img src={isRankUp ? UpArrowUrl : DownArrowUrl} alt="arrow" style={{
-            height: '15px',
-            width: '15px'
-          }}/>
+          Waitlist Rank #{rank}
             </p>
         </CardHeading>
         <CardBody>
-          <div style={{width: '100%', display: 'flex', justifyContent:'center', alignItems:'center'}}>
-              <textarea style={{overflow: 'hidden', 
+          <div style={{
+            width: '100%', 
+            display: 'flex', 
+            justifyContent:'center', 
+            alignItems:'center'}}
+            >
+              <div style={{overflow: 'hidden', 
               fontWeight:600, 
-              flex: 1,
+              marginRight: '10px'
               }} 
               className="copyReferral" 
               cols="5"
-              disabled>{code}</textarea>
+              disabled>{code}</div>
             <img src={Copy} alt="copy" style={{height: '30px', width: '30px', cursor:'pointer'}}
               onClick={CopyToClipBoard}
             />
+            </div>
+            <p style={{fontWeight: 400, width: '100%', textAlign:'center', marginTop: '40px'}}>share with your friends to improve your rank</p>
+            <div style={{width: '100%', display: 'flex', justifyContent:'space-around'}}>
+            <TwitterShareButton url={shareUrl} quote={shareQuote} onClick={() => updateServerOnShareAction('TW')}>
+              <TwitterIcon round/>
+            </TwitterShareButton>
+            <FacebookShareButton url={shareUrl} quote={shareQuote} onClick={() => updateServerOnShareAction('FB')}>
+              <FacebookIcon round/>
+            </FacebookShareButton>
+            <WhatsappShareButton url={shareUrl} quote={shareQuote} onClick={() => updateServerOnShareAction('WA')}>
+              <WhatsappIcon round/>
+            </WhatsappShareButton>
             </div>
         </CardBody>
     </CardWrapper>

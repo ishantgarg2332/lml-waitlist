@@ -5,7 +5,7 @@ function App() {
   return (
     <Routes>
       {routes.map(({ path, component }) => (
-        <Route key={path} path={path} element={component} />
+        <Route key={path} path={path} element={component} exact/>
       ))}
     </Routes>
   )

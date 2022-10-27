@@ -11,9 +11,9 @@ import {
 } from 'react-share';
 
 import Config from '../../api-config';
-import axios from 'axios';
 
 const CardWrapper = Styled.div`
+  background: #fff;
   overflow: hidden;
   padding: 0 0 32px;
   margin: 48px auto 0;
@@ -56,14 +56,20 @@ const RankCard = ({
   code,
   rank,
 }) => {
-  const shareUrl = `https://lml-waitlist.vercel.app/?code=${code}`
+  const shareUrl = `http://localhost:3000/?code=${code}`
 
   const shareQuote= 'Checkout LML\'s new EV with exciting features';
 
   function updateServerOnShareAction(app) {
-    axios.patch(`${Config.API_BASE_URL}/user/${email}`, {
-      shareChannel: app
-    }).then().catch(() => {}) 
+    fetch(`${Config.API_BASE_URL}/user/${email}`, {
+      method: 'PATCH',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
+      body: JSON.stringify({shareChannel: app})
+    }).catch(() => {})
   }
 
     return <CardWrapper>

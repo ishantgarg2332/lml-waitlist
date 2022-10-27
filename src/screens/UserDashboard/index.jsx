@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import RankCard from '../../components/RankCard'
 import Loader from 'components/Loader';
 import config from '../../api-config.js';
-import axios from 'axios';
 
 const UserDashboard = () => {
 
@@ -25,9 +24,17 @@ const UserDashboard = () => {
     async function fetchUserDetails(params) {
         try{
             setLoader(true);
-            const response = await axios.get(`${config.API_BASE_URL}/user/${params.email}`);
+            const response = await fetch(`${config.API_BASE_URL}/user/${params.email}`, {
+                method:'GET',
+                headers: {
+                    'Access-Control-Allow-Origin': '*'
+                }
+            });
+            const userData = await response.json();
+            debugger;
             if(response.status === 200){
-                setUserDetails({...response?.data})
+                debugger;
+                setUserDetails({...userData?.data})
             }
             setLoader(false);
         }catch(error){
@@ -41,13 +48,13 @@ const UserDashboard = () => {
         fetchUserDetails(paramsObj);
     }, []);
 
-    return <>
+    return <div>
     {loader ? <Loader loader={loader}/> :
-    <>
+    <div style={{backgroundColor: 'hsl(339, 67%, 17%)', height: '100vh'}}>
         <header style={{
             height: '50px',
             width: '100vw',
-            background: '#E0E0E0',
+            background: 'hsl(343, 57%, 93%)',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
@@ -69,10 +76,10 @@ const UserDashboard = () => {
             }}>Welcome {paramsObj?.name?.split('+')?.[0]} 🎉🎉🎉</p>
         </header>
         <main>
-            <RankCard rank={userDetails?.data?.rank} code={userDetails?.data?.referralcode} email={userDetails?.data?.email}/>
+            <RankCard rank={userDetails?.rank} code={userDetails?.referralcode} email={userDetails?.email}/>
         </main>
-        </>}
-    </>
+        </div>}
+    </div>
 };
 
 export default UserDashboard;

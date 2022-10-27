@@ -3,8 +3,6 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import { device } from 'styles/BreakPoints';
 import Loader from '../../../components/Loader'
-import axios from 'axios';
-import history from '../../../History';
 import config from '../../../api-config.js';
 
 const FormSectionStyle = styled.section`
@@ -40,14 +38,18 @@ const FormSection = () => {
     if(!name || !email) return;
     try{
       setLoader(true);
-      await axios.post(`${config.API_BASE_URL}/user`, {
+      await fetch(`${config.API_BASE_URL}/user`, { method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
+      body: JSON.stringify({
         name,
         email,
         code
-      }, {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'Access-Control-Allow-Origin': '*'
-      });
+      })
+    });
       window.location.assign(`http://localhost:3000/dashboard?email=${email}&name=${name}`);
     setLoader(false);
     }catch(err){

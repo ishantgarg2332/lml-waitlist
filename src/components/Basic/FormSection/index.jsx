@@ -54,7 +54,6 @@ const FormSection = () => {
     setLoader(false);
     }catch(err){
       setLoader(false);
-      console.log(err);
       window.location.href = 'https://www.lmlemotion.com/'
     }
   }

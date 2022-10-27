@@ -31,9 +31,7 @@ const UserDashboard = () => {
                 }
             });
             const userData = await response.json();
-            debugger;
             if(response.status === 200){
-                debugger;
                 setUserDetails({...userData?.data})
             }
             setLoader(false);

@@ -56,7 +56,7 @@ const RankCard = ({
   code,
   rank,
 }) => {
-  const shareUrl = `http://localhost:3000/?code=${code}`
+  const shareUrl = `https://lml-waitlist.vercel.app/?code=${code}`
 
   const shareQuote= 'Checkout LML\'s new EV with exciting features';
 

@@ -52,11 +52,11 @@ const FormSection = () => {
         code
       })
     });
-      window.location.assign(`http://localhost:3000/dashboard?email=${email}&name=${name}`);
+      window.location.assign(`https://lml-waitlist.vercel.app/dashboard?email=${email}&name=${name}`);
     setLoader(false);
     }catch(err){
       setLoader(false);
-      // window.location.href = 'https://www.lmlemotion.com/'
+      window.location.href = 'https://www.lmlemotion.com/'
     }
   }
 

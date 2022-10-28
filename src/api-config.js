@@ -1,5 +1,5 @@
 const config =  {
-    "API_BASE_URL": "http://68.183.246.38"
+    "API_BASE_URL": "https://uat.orionclaw.com"
 };
 
 export default config;

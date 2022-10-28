@@ -35,28 +35,30 @@ const FormSection = () => {
   const [loader, setLoader] = useState(false)
 
   const handleAddedInList = async ({name, email, code}) => {
-    if(!name || !email) return;
-    try{
-      setLoader(true);
-      await fetch(`${config.API_BASE_URL}/user`, { method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        crossDomain: true
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        code
-      })
-    });
-      window.location.assign(`http://localhost:3000/dashboard?email=${email}&name=${name}`);
-    setLoader(false);
-    }catch(err){
-      setLoader(false);
-      window.location.href = 'https://www.lmlemotion.com/'
-    }
+
+    await fetch('https://swapi.dev/api/planets/1/');
+    // if(!name || !email) return;
+    // try{
+    //   setLoader(true);
+    //   await fetch(`${config.API_BASE_URL}/user`, { method: 'POST',
+    //   headers: {
+    //     'Accept': 'application/json',
+    //     'Content-Type': 'application/json',
+    //     'Access-Control-Allow-Origin': '*',
+    //     crossDomain: true
+    //   },
+    //   body: JSON.stringify({
+    //     name,
+    //     email,
+    //     code
+    //   })
+    // });
+    //   window.location.assign(`http://localhost:3000/dashboard?email=${email}&name=${name}`);
+    // setLoader(false);
+    // }catch(err){
+    //   setLoader(false);
+    //   window.location.href = 'https://www.lmlemotion.com/'
+    // }
   }
 
   return (
